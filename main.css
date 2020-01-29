@@ -70,7 +70,7 @@ h1 {
 }
 
 .next-correct:hover {
-  background: lightgreen;
+  background: #90ee90;
   color: #212121;
 }
 
@@ -81,7 +81,7 @@ h1 {
 
 h3 {
   text-align: right;
-  color: lightgray;
+  color: #d3d3d3;
   font-size: 22px;
 }
 

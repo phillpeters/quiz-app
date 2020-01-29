@@ -148,6 +148,7 @@ function handleCorrectAnswer(selectionId) {
   $(".score").text(`Q ${STATE.currentQuestion + 1}/8 Score: ${STATE.score}`);
   $(`label[for=${selectionId}]`).append('<br><p class="correct">&#10003; this is the correct answer</p>');
   $("button[type=submit], button[type=button]").toggle();
+  $("button[type=submit]").attr("disabled", true);
   $("button[value=next]").addClass("next-correct");
   STATE.currentQuestion++;
 }
@@ -156,6 +157,7 @@ function handleIncorrectAnswer(selectionId, correct) {
   console.log("function handleIncorrectAnswer() ran");
   $(`label[for=${selectionId}]`).append(`<br><p class="incorrect">&#x2717; this answer is incorrect.  The correct answer is "${correct}"</p>`);
   $("button[type=submit], button[type=button]").toggle();
+  $("button[type=submit]").attr("disabled", true);
   $("button[value=next]").addClass("next-incorrect");
   STATE.currentQuestion++;
 }
@@ -168,9 +170,12 @@ function handleSubmit() {
     let selectionId = $("input[name=answer]:checked").attr("id");
     let selectionText = $(`label[for=${selectionId}]`).text();
     let correct = QUESTIONS[STATE.currentQuestion].correct;
+    $("input[name=answer]:not(:checked)").attr("disabled", true);
 
     if (!selectionId) {
       alert("Make a selection");
+      $("input[name=answer]").removeAttr("disabled");
+      $("#answer-1").focus();
       return;
     }
     
