@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="A short quiz to test your knowledge of PC Building">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="main.css">
   <title>Let's Build a PC</title>
@@ -11,65 +12,19 @@
 <body>
   <div class="container">
     <header>
-      <h1 class="header">Let's build a PC</h1>
+      <h1>Let's build a PC</h1>
     </header>
     <main>
-      <p>Take this quiz to see if you have what it takes to build your very own PC</p>
-      <button type="button" class="button button-begin">Begin</button>
-    </main>
-  </div>
-  <hr>
-  <div class="container">
-    <header>
-      <h1 class="header">Let's build a PC</h1>
-    </header>
-    <div class="questions">
-      <h3 class="score">Q 1/9 Score: 0</h3>
-      <div class="question">
-        <p>Q1. First question ... ?</p>
-        <form>
-          <input type="radio" name="answer" value="answer-1">Answer 1<br>
-          <input type="radio" name="answer" value="answer-2">Answer 2<br>
-          <input type="radio" name="answer" value="answer-3">Answer 3<br>
-          <input type="radio" name="answer" value="answer-4">Answer 4<br>
-          <button class="submit" type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="container">
-    <header>
-      <h1 class="header">Let's build a PC</h1>
-    </header>
-    <div class="questions">
-      <h3 class="score">Q 1/9 Score: 0</h3>
-      <div class="question">
-        <p>Q1. First question ... ?</p>
-        <form>
-          <input type="radio" name="answer" value="answer-1">Answer 1<br>
-          <p class="correct">&#10003; this is the correct answer</p>
-          <input type="radio" name="answer" value="answer-2">Answer 2<br>
-          <p class="incorrect">&#x2717; this answer is incorrect.  The correct answer is "PC Case, PSU, Motherboard, Processor, GPU, Memory, Storage"</p>
-          <input type="radio" name="answer" value="answer-3">Answer 3<br>
-          <input type="radio" name="answer" value="answer-4">Answer 4<br>
-          <button class="next" type="submit">Next</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="container">
-    <header>
-      <h1 class="header">Let's build a PC</h1>
-    </header>
-    <main>
-      <div class="questions">
-        <h3 class="score">Your Score: 0</h3>
-        <p>You fried your motherboard!  That's an expensive mistake...</p>
-        <button type="button">Restart the quiz</button>
+      <div class="quiz-area js-quiz-area">
+        <div class="quiz-start">
+          <p>Take this quiz to see if you have what it takes to build your very own PC</p>
+          <button type="button" class="button button-begin">Begin</button>
+        </div>
+        <div class="question-area js-question-area"></div>
       </div>
     </main>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

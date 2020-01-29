@@ -6,35 +6,119 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #212121;
 }
 
-div {
-  max-width: 600px;
+.container {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-hr {
-  width: 50%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+header {
+  color: lightgray;
+  background: url("/images/download.jpg") no-repeat center;
+  background-size: 100% auto;
+  height: 25vh;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 40px;
+}
+
+.quiz-area {
+  position: relative;
+  padding: 10px;
+  color: lightgray;
+}
+
+.quiz-start > p {
+  font-size: 20px;
+}
+
+.button {
+  background: none;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  position: absolute;
+  bottom: -75px;
+  right: 10%;
+  color: lightgray;
+  font-size: 18px;
+}
+
+.button:hover {
+  background: lightgray;
+  color: #212121;
+}
+
+.next-correct {
+  border: 2px solid lightgreen;
+  color: lightgreen;
+}
+
+.next-incorrect {
+  border: 2px solid lightcoral;
+  color: lightcoral;
+}
+
+.next-correct:hover {
+  background: lightgreen;
+  color: #212121;
+}
+
+.next-incorrect:hover {
+  background: lightcoral;
+  color: #212121;
 }
 
 h3 {
   text-align: right;
+  color: lightgray;
+  font-size: 22px;
 }
 
-.submit, .next {
-  margin-top: 10px;
+.question-area > p {
+  font-size: 20px;
 }
 
-.correct, .incorrect {
-  margin-left: 20px;
+fieldset {
+  border: none;
+}
+
+input[type=radio] {
+  float: left;
+}
+
+label {
+  margin-left: 40px;
+  display: block;
+  font-size: 20px;
 }
 
 .correct {
-  color: green;
+  color: lightgreen;
+  margin: 10px;
+  font-size: 18px;
 }
 
 .incorrect {
-  color: red;
+  color: lightcoral;
+  margin: 10px;
+  font-size: 18px;
+}
+
+img {
+  width: 300px;
+}
+
+.hidden {
+  display: none;
 }
