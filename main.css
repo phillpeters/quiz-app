@@ -16,7 +16,7 @@ body {
 
 header {
   color: lightgray;
-  background: url("images/download.jpg") no-repeat center;
+  background-image: url("/images/download.jpg") no-repeat center;
   background-size: 100% auto;
   height: 25vh;
   position: relative;
